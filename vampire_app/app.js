@@ -1,9 +1,9 @@
 // 1. Require Mongoose
-
+const mongoose = require('mongoose');
 // 2. Require your Model
-
+const db = require('./models/vampire');
 // 3. Require your extra data source
-
+const vampireArr = require('./populateVampires');
 // 4. Connect your database
 
 /////////////////////////////////////////////////
