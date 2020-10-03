@@ -1,4 +1,4 @@
-vampireArr = [
+vampireData = [
   {
     name: 'Count Chocula',
     hair_color: 'brown',
@@ -137,4 +137,4 @@ vampireArr = [
   }
 ]
 
-module.exports = vampireArr;
+module.exports = vampireData;

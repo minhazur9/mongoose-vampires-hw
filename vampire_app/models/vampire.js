@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const vampireSchema = new mongoose.Schema({
-
   name: {
     type: String,
     required: true,
@@ -39,6 +38,6 @@ const vampireSchema = new mongoose.Schema({
   }
 },{timestamps: true});
 
-const Vampire = mongoose.model("Vampire",vampireSchema);
+const Vampire = mongoose.model('Vampire',vampireSchema);
 
 module.exports = Vampire;
