@@ -284,20 +284,60 @@ const vampire4 = {
 //     process.exit();
 // })
 
-Vampire.find({loves: {$eq: "fancy cloaks", $nin: ['top hats', 'virgin blood']} }, (err, allFancyVampires) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log(allFancyVampires);
-    }
-    process.exit();
-})
+// Vampire.find({loves: {$eq: "fancy cloaks", $nin: ['top hats', 'virgin blood']} }, (err, allFancyVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFancyVampires);
+//     }
+//     process.exit();
+// })
 
 
 /////////////////////////////////////////////////
 //### Negative Selection
 
+// Vampire.find({loves: "ribbons", eye_color: {$ne: 'brown'}}, (err, allRibbonVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allRibbonVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({location: {$ne: 'Rome, Italy'}}, (err, allNotRomeVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allNotRomeVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({loves:{$ne: ['fancy cloaks','frilly shirtsleeves','appearing innocent','being tragic','brooding']}}, 
+// (err, allRibbonVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allRibbonVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$lte: 200}}, (err, allRibbonVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allRibbonVampires);
+//     }
+//     process.exit();
+// })
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
