@@ -123,60 +123,90 @@ const vampire4 = {
 //     process.exit();
 // })
 
-// Vampire.find({ gender: "f" }, (err, allFemaleVampires) => {
+
+// Vampire.find({victims: {$gt: 500} }, (err, allBigVampires) => {
 //     if (err) {
 //         console.log(err);
 //     }
 //     else {
-//         console.log(allFemaleVampires);
+//         console.log(allBigVampires);
 //     }
 //     process.exit();
 // })
 
-
-// Vampire.find({victims: {$gt: 500} }, (err, allFemaleVampires) => {
+// Vampire.find({victims: {$lte: 150} }, (err, allSmallVampires) => {
 //     if (err) {
 //         console.log(err);
 //     }
 //     else {
-//         console.log(allFemaleVampires);
+//         console.log(allSmallVampires);
 //     }
 //     process.exit();
 // })
 
-// Vampire.find({victims: {$lte: 150} }, (err, allFemaleVampires) => {
+// Vampire.find({victims: {$ne: 210234} }, (err, allFamousVampires) => {
 //     if (err) {
 //         console.log(err);
 //     }
 //     else {
-//         console.log(allFemaleVampires);
+//         console.log(allFamousVampires);
 //     }
 //     process.exit();
 // })
 
-// Vampire.find({victims: {$ne: 210234} }, (err, allFemaleVampires) => {
+// Vampire.find({victims: {$gt: 150, $lt: 500} }, (err, allMidVampires) => {
 //     if (err) {
 //         console.log(err);
 //     }
 //     else {
-//         console.log(allFemaleVampires);
+//         console.log(allMidVampires);
 //     }
 //     process.exit();
 // })
 
-Vampire.find({victims: {$gt: 150, $lt: 500} }, (err, allFemaleVampires) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log(allFemaleVampires);
-    }
-    process.exit();
-})
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+// Vampire.find({title: {$exists: true} }, (err, allTitleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allTitleVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$exists: false} }, (err, allPassiveVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allPassiveVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$exists: false}, title: {$exists: true} }, (err, allPeacefulVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allPeacefulVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$exists: true, $gt: 1000} }, (err, allKillerVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allKillerVampires);
+//     }
+//     process.exit();
+// })
 /////////////////////////////////////////////////
 // ### Select with OR
 
