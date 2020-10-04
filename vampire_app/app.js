@@ -210,6 +210,46 @@ const vampire4 = {
 /////////////////////////////////////////////////
 // ### Select with OR
 
+// Vampire.find({$or: [{location: "New York, New York, US"}, {location: "New Orleans, Louisiana, US"}]}, (err, allCityVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allCityVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({$or: [{loves: "brooding"}, {loves: "being tragic"}]}, (err, allDramaVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allDramaVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({$or: [{victims: {$gt: 1000}}, {loves: "marshmellows"}]}, (err, allMarshmellowVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allMarshmellowVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({$or: [{hair_color: "red"}, {eye_color: "green"}]}, (err, allMarshmellowVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allMarshmellowVampires);
+//     }
+//     process.exit();
+// })
+
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
