@@ -401,6 +401,26 @@ const eve = {
 /////////////////////////////////////////////////
 // ## REMOVE
 
+// Vampire.deleteOne({ hair_color: 'brown' }, (err, deleted) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(deleted);
+//     }
+//     process.exit();
+// })
+
+// Vampire.deleteMany({ eye_color: 'blue' }, (err, deleted) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(deleted);
+//     }
+//     process.exit();
+// })
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
