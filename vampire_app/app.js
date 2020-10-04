@@ -57,7 +57,7 @@ const vampire1 = {
     name: 'Count count',
     eye_color: 'red',
     dob: new Date(1800, 4, 5, 5, 50),
-    love: ['blood'],
+    loves: ['blood'],
     location: 'New York, New York, US',
     gender: 'm',
     victims: 500,
@@ -67,7 +67,7 @@ const vampire2 = {
     name: 'Count fem',
     eye_color: 'blue',
     dob: new Date(1850, 8, 3, 9, 10),
-    love: ['smores'],
+    loves: ['smores'],
     location: 'Boston, Massachusetts, US',
     gender: 'm',
     victims: 500,
@@ -78,7 +78,7 @@ const vampire3 = {
     hair_color: 'brown',
     eye_color: 'green',
     dob: new Date(1790, 3, 5, 7, 18),
-    love: ['nothing'],
+    loves: ['nothing'],
     location: 'London, England',
     gender: 'f',
     victims: 100,
@@ -89,13 +89,24 @@ const vampire4 = {
     name: 'Count helsin',
     hair_color: 'black',
     eye_color: 'brown',
-    love: ['everything'],
+    loves: ['everything'],
     dob: new Date(1805, 5, 1, 5, 19),
     location: 'London, England',
     gender: 'm',
     victims: 57,
 
 };
+
+const eve = {
+    name: 'Eve',
+    hair_color: 'red',
+    eye_color: 'black',
+    loves: ['drinking blood'],
+    do: new Date(1,6,3,500),
+    location: 'Earth',
+    gender: 'f',
+    victime: 2400000,
+}
 
 // Vampire.create(vampire4, (err, createdVampire) => {
 //     if (err) {
@@ -341,6 +352,16 @@ const vampire4 = {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
+
+Vampire.replaceOne({name: 'Claudia'},Eve, (err, allRibbonVampires) => {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        console.log(allRibbonVampires);
+    }
+    process.exit();
+})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
