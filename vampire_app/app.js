@@ -39,16 +39,16 @@ mongoose.connection.on('error', () => {
 //     process.exit();
 // })
 
-// Vampire.find({}, (err, vampire) => {
-//     if (err) {
-//         console.log(err);
-//     }
-//     else {
-//         console.log(vampire);
-//     }
-//     process.exit();
+Vampire.find({}, (err, vampire) => {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        console.log(vampire);
+    }
+    process.exit();
 
-// })
+})
 
 
 // ### Add some new vampire data
@@ -353,15 +353,15 @@ const eve = {
 /////////////////////////////////////////////////
 // ## REPLACE
 
-Vampire.replaceOne({name: 'Claudia'},Eve, (err, allRibbonVampires) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log(allRibbonVampires);
-    }
-    process.exit();
-})
+// Vampire.replaceOne({name: 'Claudia'},eve, (err, allRibbonVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allRibbonVampires);
+//     }
+//     process.exit();
+// })
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
