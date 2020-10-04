@@ -39,9 +39,16 @@ mongoose.connection.on('error', () => {
 //     process.exit();
 // })
 
-Vampire.find({}, (err,v) => {
-    console.log(v)
-})
+// Vampire.find({}, (err, vampire) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(vampire);
+//     }
+//     process.exit();
+
+// })
 
 
 // ### Add some new vampire data
@@ -105,6 +112,67 @@ const vampire4 = {
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
+
+// Vampire.find({ gender: "f" }, (err, allFemaleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFemaleVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({ gender: "f" }, (err, allFemaleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFemaleVampires);
+//     }
+//     process.exit();
+// })
+
+
+// Vampire.find({victims: {$gt: 500} }, (err, allFemaleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFemaleVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$lte: 150} }, (err, allFemaleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFemaleVampires);
+//     }
+//     process.exit();
+// })
+
+// Vampire.find({victims: {$ne: 210234} }, (err, allFemaleVampires) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(allFemaleVampires);
+//     }
+//     process.exit();
+// })
+
+Vampire.find({victims: {$gt: 150, $lt: 500} }, (err, allFemaleVampires) => {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        console.log(allFemaleVampires);
+    }
+    process.exit();
+})
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
