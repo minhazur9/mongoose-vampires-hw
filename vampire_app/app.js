@@ -39,16 +39,16 @@ mongoose.connection.on('error', () => {
 //     process.exit();
 // })
 
-Vampire.find({}, (err, vampire) => {
-    if (err) {
-        console.log(err);
-    }
-    else {
-        console.log(vampire);
-    }
-    process.exit();
+// Vampire.find({}, (err, vampire) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(vampire);
+//     }
+//     process.exit();
 
-})
+// })
 
 
 // ### Add some new vampire data
@@ -102,7 +102,7 @@ const eve = {
     hair_color: 'red',
     eye_color: 'black',
     loves: ['drinking blood'],
-    do: new Date(1,6,3,500),
+    do: new Date(1, 6, 3, 500),
     location: 'Earth',
     gender: 'f',
     victime: 2400000,
@@ -353,12 +353,12 @@ const eve = {
 /////////////////////////////////////////////////
 // ## REPLACE
 
-// Vampire.replaceOne({name: 'Claudia'},eve, (err, allRibbonVampires) => {
+// Vampire.replaceOne({name: 'Claudia'},eve, (err, claudia) => {
 //     if (err) {
 //         console.log(err);
 //     }
 //     else {
-//         console.log(allRibbonVampires);
+//         console.log(claudia);
 //     }
 //     process.exit();
 // })
@@ -366,6 +366,36 @@ const eve = {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
+
+// Vampire.updateOne({ name: 'Eve' }, { gender: 'm' }, { new: true }, (err, eve) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(eve);
+//     }
+//     process.exit();
+// })
+
+// Vampire.updateOne({ name: 'Eve' }, { name: 'moniker' }, { new: true }, (err, eve) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(eve);
+//     }
+//     process.exit();
+// })
+
+// Vampire.updateMany({ gender: 'f' }, { gender: 'fems' }, { new: true }, (err, fems) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     else {
+//         console.log(fems);
+//     }
+//     process.exit();
+// })
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
